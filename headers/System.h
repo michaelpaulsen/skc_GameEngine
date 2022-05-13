@@ -12,5 +12,15 @@ class System {
 			/// they might want to put the uuid for the player(s) in thier own vars... 
 		}
 	}
+	std::vector<Entity*> GetEntitiesByType(int type) {
+		std::vector< Entity*> ent;
+		for (auto& x : this->entities) {
+			if (x->GetType() == type) {
+				ent.push_back(&x);
+			}
+		}
+		return ent;
+		///this should be the list of all of the entities of a given type. 
+	}
 };
 #endif // !ECS
