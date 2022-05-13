@@ -34,5 +34,8 @@ public:
 		}
 		return nullptr; 
 	}
+	void AddComponent(Component* comp) {
+		this->components.push_back(comp); 
+	}
 };
 #endif // !ENT

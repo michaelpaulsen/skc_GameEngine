@@ -22,5 +22,8 @@ class System {
 		return ent;
 		///this should be the list of all of the entities of a given type. 
 	}
+	void AddEntity(Entity* ent) {
+		entities.push_back(ent);x
+	}
 };
 #endif // !ECS
