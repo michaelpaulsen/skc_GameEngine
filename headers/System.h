@@ -8,6 +8,7 @@
 class System {
 	std::vector<Entity*> entities;
 	/// this will hold other things like the renderer and input systems but for now it just holds the suff for the entity
+public: 
 	uint64_t CreateEntity(int type = 0) {
 		/// this should be from your entity_type struct*/
 		/// this should be the main way that you create entities if you want to keep the uuid 
