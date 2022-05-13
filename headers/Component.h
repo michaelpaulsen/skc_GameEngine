@@ -7,7 +7,7 @@
 #endif // !EXIT_SUCESS
 class Component
 {
-	bool active;
+	bool active = false;
 public:
 	std::string name; 
 	virtual bool Activate() {

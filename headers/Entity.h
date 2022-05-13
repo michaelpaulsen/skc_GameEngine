@@ -9,9 +9,9 @@
 #include "Component.h"
 
 class Entity {
-	static uint64_t nextuuid = 0;
-	       uint64_t uuid;
-	       uint64_t type;
+	static inline uint64_t nextuuid = 0;
+		   uint64_t uuid;
+		   uint64_t type;
 	///this is the type of the entity
 	///the end user should define an enum that has all of the types that they use
 	///this can be used by the system to return a vector of all of the entities of that type
@@ -29,10 +29,18 @@ public:
 	}
 	std::vector<Component*> components;
 	Component* GetFirstComponetByName(std::string name) {
+		/// gets the first component of type name then returns it 
 		for (const auto &x : this->components) {
 			if (x->name == name) return x; 
 		}
 		return nullptr; 
+	}
+	Component* GetFirstActiveComponetByName(std::string name) {
+		///gets the first component that has its active bit set to true of type name then returns it 
+		for (const auto &x : this->components) {
+			if (x->name == name && x->IsActive()) return x;
+		}
+		return nullptr;
 	}
 	void AddComponent(Component* comp) {
 		this->components.push_back(comp); 
