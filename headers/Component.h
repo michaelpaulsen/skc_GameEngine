@@ -25,7 +25,7 @@ public:
 	/// what making this a variadic function does is it allows you to pass in any function
 	/// then in the override of run only deal with the ones that you want to
 	/// this prevents you from having to pass a whole GameState object to the run function
-	virtual int Run(...) {
+	virtual int Run(char* action  ...) {
 		return EXIT_SUCESS;
 	}
 };
