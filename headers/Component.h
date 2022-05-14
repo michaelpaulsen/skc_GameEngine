@@ -10,7 +10,7 @@ class Component
 	bool active = false;
 public:
 	std::string name; 
-	virtual bool Activate() {
+	virtual void Activate() {
 		this->OnActivate(); 
 		this->active = true; 
 	}

@@ -23,6 +23,7 @@ public:
 			///it is up to the end-user to keep track of the uuids. 
 			/// they might want to put the uuid for the player(s) in thier own vars... 
 		}
+		return nullptr; 
 	}
 	std::vector<Entity*> GetEntitiesByType(int type) {
 		std::vector< Entity*> ent;
